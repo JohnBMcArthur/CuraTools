@@ -24,5 +24,5 @@ def count_pixels_in_range(image, lower, upper):
     grayscale_image = ImageOps.grayscale(image)
     grayscale_array = np.array(grayscale_image)
     in_range = np.sum((grayscale_array >= lower) & (grayscale_array <= upper))
-    total_pixels = np.sum(grayscale_array)
+    total_pixels = grayscale_array.size
     return in_range, total_pixels
