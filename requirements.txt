@@ -1,3 +1,10 @@
 numpy==1.26.4
 biopython==1.83
 requests==2.31.0
+PIL
+pandas
+io
+os
+scipy
+matplotlib
+csv
