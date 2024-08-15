@@ -120,8 +120,8 @@ elif tool == 'Pixel Counts':
                 for file in uploaded_files:
                     image = Image.open(file)
                     in_range, total_pixels = count_pixels_in_range(image, lower, upper)
-                    percent_pixels = in_range/total_pixels*100
-                    pixel_counts.append({"File Name": file.name, "Pixel Count": in_range, "Total Pixels (%)": total_pixels, "Percentage": percent_pixels})
+                    percent_pixels = 100*in_range/total_pixels
+                    pixel_counts.append({"File Name": file.name, "Pixel Count": in_range, "Total Pixels": total_pixels, "Percentage (%)": percent_pixels})
 
                 pixel_df = pd.DataFrame(pixel_counts)
                 st.write(pixel_df)
